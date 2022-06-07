@@ -12,6 +12,6 @@ import "./assets/font-awesome/css/font-awesome.css";
 import "./assets/font-awesome/css/font-awesome.min.css";
 // import "./assets/bootstrap.min.css"
 
-import "./assets/js/main.js"
+// import "./assets/js/main.js"
 
 createApp(App).use(router).mount('#app')

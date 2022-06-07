@@ -22,7 +22,7 @@
                 </li>&nbsp;
                 <li>{{$route.params.read_time}}</li>&nbsp;
                 <li><i class="fa fa-comments-o fa-lg" title="number of comments"></i>
-                  comment_count
+                  {{$route.params.total_comment}}
                 </li>
               </ul>
             </div>
@@ -34,7 +34,7 @@
           </div>
           <p class="tags">
             <span>Tagged in </span>:
-            <a href="" class="badge badge-pill badge-info">
+            <a href="" class="badge badge-pill badge-info">{{$route.params.tags}}
             </a>
           </p>
           <ul class="post-nav group">
@@ -60,7 +60,7 @@
             <div class="panel-heading">
               <h4 class="panel-title">
                 <a data-toggle="collapse" href="#collapse1">Comments:
-                  <span></span>
+                  <span>{{$route.params.total_comment}}</span>
                 </a>
               </h4>
             </div>
@@ -69,6 +69,7 @@
                 <li>
                   <a href="#"></a>
                   <span><small class="text-muted"></small></span><br />
+                  {{$route.params.tags}}
 
                 </li>
                 <div style="padding-left: 40px">

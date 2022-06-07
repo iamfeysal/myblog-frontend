@@ -8,13 +8,16 @@
           <header class="entry-header">
             <h2 class="entry-title">
               <router-link :to="{
-                name: 'detail', params: {id:
-                post.id, title:
-                post.title,
-                slug: post.slug,
-                publish: post.publish,
-                read_time: post.read_time,
-                }}">
+                name: 'detail', params: {
+                  id:post.id,
+                  title: post.title,
+                  slug: post.slug,
+                  publish: post.publish,
+                  read_time: post.read_time,
+                  total_comment: post.total_comment,
+                  comment: post.comment,
+                  tags: post.tags,
+                  }}">
                 {{ post.title }}
               </router-link>
             </h2>
@@ -28,13 +31,27 @@
                 </li>
                 <li>
                   <i class="fa fa-refresh"></i>
-                  {{ formatDate(post.updated) }}</li>
+                  {{ formatDate(post.updated).toLocaleString() }}</li>
                 &nbsp;
                 <li>
                   <i class="fa fa-clock-o fa-lg" title="read time in minutes">
                     {{ post.read_time }}
                   </i>
                 </li>
+                &nbsp;
+                <li>
+                  <i class="fa fa-clock-o fa-lg" title="read time in minutes">
+                    {{ post.tags }}
+                  </i>
+                </li>
+                &nbsp;
+                <li>
+                  <i class="fa fa-clock-o fa-lg" title="read time in minutes">
+                    {{ post.comment[0] }}
+                  </i>
+                </li>
+
+
               </ul>
             </div>
           </header>
@@ -128,6 +145,10 @@ export default {
     this.get_Poular_Posts();
     this.get_Most_CommentedPosts();
   },
+  computed: {
+
+  },
+
   methods: {
     get_Posts() {
       axios({
