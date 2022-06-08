@@ -98,16 +98,10 @@
         <div class="widget widget_popular">
           <h3>More Similar Post</h3>
           <ul class="link-list">
-            <!--            {% for post in similar_posts %}-->
             <li><a href="">
-              <!--              {{ post.title|capfirst }}-->
-              <!--              {% if post.photo %}-->
             </a>
-              <!--              {% endif %}-->
             </li>
-            <!--            {% empty %}-->
             There are no similar posts yet.
-            <!--            {% endfor %}-->
           </ul>
         </div>
       </div> <!-- end sidebar -->
