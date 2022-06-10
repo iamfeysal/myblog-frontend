@@ -48,14 +48,14 @@
             </li>
           </ul>
           <div class="share">
-            <div class="sharepost">
-              <li><a class="twitter" href="http://twitter.com/share?url={{  request.build_absolute_uri }}" rel="nofollow" target="_blank" title="Twitter Tweet">
-                <i class="fa fa-twitter"></i>&nbsp; Tweet</a></li>
-              <li><a class="facebook" href="https://www.linkedin.com/sharing/share-offsite/?mini=true&url={{  request.build_absolute_uri }}" rel="nofollow" target="_blank" title="Facebook Share">
-                <i class="fa fa-linkedin"></i>&nbsp; Share</a></li>
-              <li><a class="facebook" href="http://www.facebook.com/sharer.php?u={{  request.build_absolute_uri }}" rel="nofollow" target="_blank" title="Facebook Share">
-                <i class="fa fa-facebook"></i>&nbsp; Share</a></li>
-            </div>
+<!--            <div class="sharepost">-->
+<!--              <li><a class="twitter" href="http://twitter.com/share?url={{  request.build_absolute_uri }}" rel="nofollow" target="_blank" title="Twitter Tweet">-->
+<!--                <i class="fa fa-twitter"></i>&nbsp; Tweet</a></li>-->
+<!--              <li><a class="facebook" href="https://www.linkedin.com/sharing/share-offsite/?mini=true&url={{  request.build_absolute_uri }}" rel="nofollow" target="_blank" title="Facebook Share">-->
+<!--                <i class="fa fa-linkedin"></i>&nbsp; Share</a></li>-->
+<!--              <li><a class="facebook" href="http://www.facebook.com/sharer.php?u={{  request.build_absolute_uri }}" rel="nofollow" target="_blank" title="Facebook Share">-->
+<!--                <i class="fa fa-facebook"></i>&nbsp; Share</a></li>-->
+<!--            </div>-->
           </div>
         </article>
         <br>
