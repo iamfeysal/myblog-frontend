@@ -4,7 +4,7 @@
   <div id="content-wrap">
     <div class="row">
       <div id="main" class="eight columns">
-        <article class="entry" v-for="post in posts" :key="post.id">
+        <article class="entry" v-for="(post, index) in posts" :key="index">
           <header class="entry-header">
             <h2 class="entry-title">
               <router-link :to="{
@@ -39,17 +39,17 @@
                   </i>
                 </li>
                 &nbsp;
-                <li>
-                  <i class="fa fa-clock-o fa-lg" title="read time in minutes">
-                    {{ post.tags }}
-                  </i>
-                </li>
-                &nbsp;
-                <li>
-                  <i class="fa fa-clock-o fa-lg" title="read time in minutes">
-                    {{ post.comment[0] }}
-                  </i>
-                </li>
+<!--                <li>-->
+<!--                  <i class="fa fa-clock-o fa-lg" title="read time in minutes">-->
+<!--                    {{ index }}-->
+<!--                  </i>-->
+<!--                </li>-->
+<!--                &nbsp;-->
+<!--                <li>-->
+<!--                  <i class="fa fa-clock-o fa-lg" title="read time in minutes">-->
+<!--                    {{ post.comment[0] }}-->
+<!--                  </i>-->
+<!--                </li>-->
 
 
               </ul>
@@ -128,13 +128,13 @@
 <script>
 import axios from 'axios'
 import moment from 'moment'
+import { mapState } from "vuex";
 
 export default {
   name: "HomeBlog",
 
   data() {
     return {
-      // posts
       posts: [],
       popularPosts:[],
       mostCommentedPosts:[],
@@ -146,6 +146,7 @@ export default {
     this.get_Most_CommentedPosts();
   },
   computed: {
+    ...mapState(["posts"])
 
   },
 

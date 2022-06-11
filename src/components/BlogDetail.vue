@@ -9,7 +9,7 @@
             <div class="wp">
               <ul  class="breadcrumb">
                 <li><a href="/">Home</a></li>
-                <li><a href=""></a></li>
+                <li><a href="">post detail</a></li>
               </ul>
             </div>
             <h2 class="entry-title">
@@ -67,7 +67,7 @@
                 <li>
                   <a href="#"></a>
                   <span><small class="text-muted"></small></span><br />
-                  {{$route.params.tags}}
+                  {{$route.params.comment}}
 
                 </li>
                 <div style="padding-left: 40px">

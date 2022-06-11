@@ -5,6 +5,13 @@
 <!--  </nav>-->
   <router-view/>
 </template>
-
+<script>
+export default {
+  created() {},
+  mounted() {},
+  methods: {},
+  watch: {},
+};
+</script>
 <style>
 </style>
