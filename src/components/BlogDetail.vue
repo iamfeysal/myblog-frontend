@@ -114,6 +114,12 @@ import moment from "moment";
 export default {
   name: "BlogDetail",
 
+  props: {
+    posts: {
+      type: Object,
+    }
+  },
+
   methods: {
     formatDate(value) {
       if (value) {

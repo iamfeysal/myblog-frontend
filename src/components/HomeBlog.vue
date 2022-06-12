@@ -128,7 +128,7 @@
 <script>
 import axios from 'axios'
 import moment from 'moment'
-import { mapState } from "vuex";
+// import { mapState } from "vuex";
 
 export default {
   name: "HomeBlog",
@@ -141,34 +141,34 @@ export default {
     }
   },
   mounted () {
-    this.get_Posts();
-    this.get_Poular_Posts();
-    this.get_Most_CommentedPosts();
+    this.getPosts();
+    this.getPoularPosts();
+    // this.getMostCommentedPosts();
   },
   computed: {
-    ...mapState(["posts"])
+    // ...mapState(["posts"])
 
   },
 
   methods: {
-    get_Posts() {
+    getPosts() {
       axios({
         method:'get',
         url: 'http://127.0.0.1:8000/posts_list_resource',
       }).then(response => this.posts = response.data);
     },
-    get_Poular_Posts() {
+    getPoularPosts() {
       axios({
         method:'get',
         url: 'http://127.0.0.1:8000/popular_posts_resource',
       }).then(response => this.popularPosts = response.data);
     },
-    get_Most_CommentedPosts() {
-      axios({
-        method:'get',
-        url: 'http://127.0.0.1:8000/most_commented_posts_resource',
-      }).then(response => this.mostCommentedPosts = response.data);
-    },
+    // getMostCommentedPosts() {
+    //   axios({
+    //     method:'get',
+    //     url: 'http://127.0.0.1:8000/most_commented_posts_resource',
+    //   }).then(response => this.mostCommentedPosts = response.data);
+    // },
     formatDate(value){
       if (value) {
         return moment(String(value)).format('DD/MM/yyyy')
